@@ -1,0 +1,11 @@
+.page-slider {
+	width: 100%;
+}
+
+@include max-screen(740px) {
+	.page-slider {
+		.swiper-wrapper {
+			display: block;
+		}
+	}
+}

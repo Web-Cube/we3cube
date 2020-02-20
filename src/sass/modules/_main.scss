@@ -1,0 +1,45 @@
+.main {
+	width: 100%;
+	&__desc {
+		margin-top: 20rem;
+		font-size: 22rem;
+		line-height: 26rem;
+		font-weight: 300;
+	}
+	&__bottom {
+		margin-top: 40rem;
+	}
+	&__btn {
+		&:not(:last-child) {
+			margin-right: 30rem;
+		}
+	}
+}
+
+@include max-screen(740px) {
+	.main {
+		margin-top: 40px;
+	}
+}
+
+@include max-screen($large_mobile) {
+	.main {
+		&__desc {
+			font-size: 16rem;
+			line-height: 23rem;
+			p {
+				br {
+					display: none;
+				}
+			}
+		}
+		&__btn {
+			&:not(:last-child) {
+				margin-right: 20rem;
+			}
+		}
+		&__bottom {
+			margin-top: 25rem;
+		}
+	}
+}

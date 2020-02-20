@@ -1,0 +1,55 @@
+
+.content p,.p,
+.content li, .li{
+
+}
+
+.content ul, .content ol{
+
+}
+
+.content b,.b{
+}
+
+.content a,.a{
+
+}
+
+.h1, .content h1,
+.h2, .content h2,
+.h3, .content h3,
+.h4, .content h4,
+.h5, .content h5,
+.h6, .content h6,{
+	font-weight: normal;
+}
+
+.h1, .content h1{
+	font-size: 34rem;
+	line-height: 40rem;
+}
+
+.h2, .content h2{
+}
+
+.h3, .content h3{
+
+}
+
+.h4, .content h4{
+}
+
+.h5, .content h5{
+}
+
+
+.h6, .content h6{
+}	
+
+
+@include max-screen($small_tablet) {
+	.h1, .content h1{
+		font-size: 26rem;
+		line-height: 30rem;
+	}
+}

@@ -1,0 +1,29 @@
+.footer {
+	padding: 30rem 0 30rem 0;
+	margin-top: 50rem;
+	&__text {
+		margin-right: 20rem;
+		display: none;
+	}
+}
+
+@include max-screen(740px) {
+	.footer {
+		background: #000;
+		&__wrap {
+			justify-content: center;
+		}
+		&__text {
+			display: block;
+		}
+	}
+}
+
+@include max-screen($large_mobile) {
+	.footer {
+		&__text {
+			margin-bottom: 12px;
+			margin-right: 0;
+		}
+	}
+}
