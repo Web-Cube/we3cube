@@ -6,16 +6,11 @@
 				+e.logo-text WE3CUBE
 			+e.nav.swiper-container
 				ul.swiper-wrapper
-					li.swiper-slide
-						a(href="#") Главная
-					li.swiper-slide
-						a(href="#") О нас
-					li.swiper-slide
-						a(href="#") Портфолио
-					li.swiper-slide
-						a(href="#") Блог
-					li.swiper-slide
-						a(href="#") Контакты
+					li.swiper-slide(data-href="#main") Главная
+					li.swiper-slide(data-href="#about") О нас
+					li.swiper-slide(data-href="#portfolio") Портфолио
+					li.swiper-slide(data-href="#blog") Блог
+					li.swiper-slide(data-href="#contact") Контакты
 		+e.right
 			+e.A.phone(href="tel:+380981234567")
 				span.color-blue +38 
@@ -36,15 +31,15 @@
 			+e.mobile-nav
 				ul
 					li
-						a.js-scroll-to(href="#main") Главная
+						a.js-link.js-scroll-to(href="#main") Главная
 					li
-						a.js-scroll-to(href="#about") О нас
+						a.js-link.js-scroll-to(href="#about") О нас
 					li
-						a.js-scroll-to(href="#portfolio") Портфолио
+						a.js-link.js-scroll-to(href="#portfolio") Портфолио
 					li
-						a.js-scroll-to(href="#blog") Блог
+						a.js-link.js-scroll-to(href="#blog") Блог
 					li
-						a.js-scroll-to(href="#contact") Контакты
+						a.js-link.js-scroll-to(href="#contact") Контакты
 			+e.mobile-bottom
 				+e.mobile-contact
 					+e.A.mobile-phone(href="tel:+380981234567")

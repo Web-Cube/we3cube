@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Главная</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1582218253198">
+    <link rel="stylesheet" href="/app/css/app.css?v=1582526607445">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -23,16 +23,11 @@
                         </a>
                         <div class="header__nav swiper-container">
                             <ul class="swiper-wrapper">
-                                <li class="swiper-slide"><a href="#">Главная</a>
-                                </li>
-                                <li class="swiper-slide"><a href="#">О нас</a>
-                                </li>
-                                <li class="swiper-slide"><a href="#">Портфолио</a>
-                                </li>
-                                <li class="swiper-slide"><a href="#">Блог</a>
-                                </li>
-                                <li class="swiper-slide"><a href="#">Контакты</a>
-                                </li>
+                                <li class="swiper-slide" data-href="#main">Главная</li>
+                                <li class="swiper-slide" data-href="#about">О нас</li>
+                                <li class="swiper-slide" data-href="#portfolio">Портфолио</li>
+                                <li class="swiper-slide" data-href="#blog">Блог</li>
+                                <li class="swiper-slide" data-href="#contact">Контакты</li>
                             </ul>
                         </div>
                     </div>
@@ -53,15 +48,15 @@
                     <div class="header__mobile-wrap wrap">
                         <div class="header__mobile-nav">
                             <ul>
-                                <li><a class="js-scroll-to" href="#main">Главная</a>
+                                <li><a class="js-link js-scroll-to" href="#main">Главная</a>
                                 </li>
-                                <li><a class="js-scroll-to" href="#about">О нас</a>
+                                <li><a class="js-link js-scroll-to" href="#about">О нас</a>
                                 </li>
-                                <li><a class="js-scroll-to" href="#portfolio">Портфолио</a>
+                                <li><a class="js-link js-scroll-to" href="#portfolio">Портфолио</a>
                                 </li>
-                                <li><a class="js-scroll-to" href="#blog">Блог</a>
+                                <li><a class="js-link js-scroll-to" href="#blog">Блог</a>
                                 </li>
-                                <li><a class="js-scroll-to" href="#contact">Контакты</a>
+                                <li><a class="js-link js-scroll-to" href="#contact">Контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -83,92 +78,444 @@
             </header>
         </div>
         <div class="fullpage__center">
-            <div class="preloader">
-                <div class="preloader__logo js-svg" data-svg-src="app/img/main__cube.svg"></div>
-                <div class="preloader__wrap">
-                    <div class="preloader__title color-blue">WE3CUBE STUDIO</div>
-                    <div class="preloader__desc h1">Студия веб дизайна</div>
-                </div>
-            </div>
+            <!--include ../layouts/preloader-->
             <img class="page-bg" src="app/img/main__cube.svg">
             <div class="page-slider swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" id="main">
+                <div class="page-slider__wrapper swiper-wrapper">
+                    <div class="page-slider__slide swiper-slide" id="main">
                         <div class="main">
                             <div class="main__wrap wrap">
-                                <h1 class="main__title color-blue h1">WE3CUBE STUDIO</h1>
-                                <div class="main__desc">
-                                    <p>Дизайн веб продуктов.</p>
-                                    <p>Решим задачи связанные с&nbsp;дизайном
-                                        <br>сайтов, приложений, фирменного стиля.</p>
-                                    <p>Продвинем сайт в&nbsp;поисковиках.</p>
-                                    <p>Наполним контентом сайт.</p>
-                                </div>
-                                <div class="main__bottom flex"><a class="main__btn btn btn_fill btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">наши проекты</span></a><a class="main__btn btn btn_stroke btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">связь с&nbsp;нами</span></a>
+                                <div class="main__row flex flex_justify flex_vertical">
+                                    <div class="main__left">
+                                        <h1 class="main__title color-blue h1">WE3CUBE STUDIO</h1>
+                                        <div class="main__desc">
+                                            <p>Дизайн веб продуктов.</p>
+                                            <p>Решим задачи связанные с&nbsp;дизайном сайтов, приложений, фирменного стиля.</p>
+                                            <p>Продвинем сайт в&nbsp;поисковиках.</p>
+                                            <p>Наполним контентом сайт.</p>
+                                        </div>
+                                        <div class="main__bottom flex"><a class="main__btn btn btn_fill btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">наши проекты</span></a><a class="main__btn btn btn_stroke btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">связь с&nbsp;нами</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="main__right">
+                                        <img class="main__img" src="app/img/undraw_static_assets_rpm6.svg" alt="" role="presentation" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide" id="about">
-                        <div class="main">
-                            <div class="main__wrap wrap">
-                                <h1 class="main__title color-blue h1">WE3CUBE STUDIO</h1>
-                                <div class="main__desc">
-                                    <p>Дизайн веб продуктов.</p>
-                                    <p>Решим задачи связанные с&nbsp;дизайном
-                                        <br>сайтов, приложений, фирменного стиля.</p>
-                                    <p>Продвинем сайт в&nbsp;поисковиках.</p>
-                                    <p>Наполним контентом сайт.</p>
-                                </div>
-                                <div class="main__bottom flex"><a class="main__btn btn btn_fill btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">наши проекты</span></a><a class="main__btn btn btn_stroke btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">связь с&nbsp;нами</span></a>
+                    <div class="page-slider__slide swiper-slide" id="about">
+                        <div class="category">
+                            <div class="category__wrap wrap">
+                                <h2 class="category__title h1"><span class="color-blue"> Наши </span>направления</h2>
+                                <div class="category__list flex">
+                                    <div class="category__item">
+                                        <h3 class="category__item-title">ИНТЕРНЕТ МАГАЗИН</h3>
+                                        <div class="category__icon">
+                                            <svg class="icon icon-shop shop" viewBox="0 0 484.564 484.564">
+                                                <use xlink:href="/app/icons/sprite.svg#shop"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="category__item">
+                                        <h3 class="category__item-title">LANDING PAGE</h3>
+                                        <div class="category__icon">
+                                            <svg class="icon icon-landing-page landing-page" viewBox="0 0 512 512">
+                                                <use xlink:href="/app/icons/sprite.svg#landing-page"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="category__item">
+                                        <h3 class="category__item-title">САЙТ ВИЗИТКА</h3>
+                                        <div class="category__icon">
+                                            <svg class="icon icon-business-card business-card" viewBox="0 0 508 508">
+                                                <use xlink:href="/app/icons/sprite.svg#business-card"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="category__item">
+                                        <h3 class="category__item-title">WEB Дизайн</h3>
+                                        <div class="category__icon">
+                                            <svg class="icon icon-design design" viewBox="0 0 512 512">
+                                                <use xlink:href="/app/icons/sprite.svg#design"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="category__item">
+                                        <h3 class="category__item-title">CMS(системы управления сайтом)</h3>
+                                        <div class="category__icon">
+                                            <svg class="icon icon-cms cms" viewBox="0 0 512 512">
+                                                <use xlink:href="/app/icons/sprite.svg#cms"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="category__item">
+                                        <h3 class="category__item-title">Аналитика, <br>проектирование</h3>
+                                        <div class="category__icon">
+                                            <svg class="icon icon-analisys analisys" viewBox="0 0 512 512">
+                                                <use xlink:href="/app/icons/sprite.svg#analisys"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="category__item">
+                                        <h3 class="category__item-title">Рерайт/копирайт</h3>
+                                        <div class="category__icon">
+                                            <svg class="icon icon-copyright copyright" viewBox="0 0 480 480">
+                                                <use xlink:href="/app/icons/sprite.svg#copyright"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="category__item">
+                                        <h3 class="category__item-title">HTML верстка, <br>написание скриптов</h3>
+                                        <div class="category__icon">
+                                            <svg class="icon icon-code code" viewBox="0 -25 424 424">
+                                                <use xlink:href="/app/icons/sprite.svg#code"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide" id="portfolio">
-                        <div class="main">
-                            <div class="main__wrap wrap">
-                                <h1 class="main__title color-blue h1">WE3CUBE STUDIO</h1>
-                                <div class="main__desc">
-                                    <p>Дизайн веб продуктов.</p>
-                                    <p>Решим задачи связанные с&nbsp;дизайном
-                                        <br>сайтов, приложений, фирменного стиля.</p>
-                                    <p>Продвинем сайт в&nbsp;поисковиках.</p>
-                                    <p>Наполним контентом сайт.</p>
+                    <div class="page-slider__slide swiper-slide" id="portfolio">
+                        <div class="portfolio">
+                            <div class="portfolio__wrap wrap">
+                                <h2 class="portfolio__title h1">Реализованные <span class="color-blue">проекты</span></h2>
+                                <div class="portfolio__slider swiper-container">
+                                    <div class="portfolio__slider-wrapper swiper-wrapper">
+                                        <div class="portfolio__slide shop swiper-slide">
+                                            <a class="portfolio__item shop" href="case.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio__img1.webp">
+                                                        <img src="/app/img/portfolio__img1.jpg" />
+                                                </picture><span class="portfolio__info"><span class="portfolio__info-wrap"><span class="portfolio__name color-blue">Интернет-магазин</span><span class="portfolio__desc">TTFY - одежда для&nbsp;фитнеса</span><span class="portfolio__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                <span
+                                                class="btn__text">Подробнее</span>
+                                                    </span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio__slide html swiper-slide">
+                                            <a class="portfolio__item html" href="case.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio__img2.webp">
+                                                        <img src="/app/img/portfolio__img2.jpg" />
+                                                </picture><span class="portfolio__info"><span class="portfolio__info-wrap"><span class="portfolio__name color-blue">HTML верстка</span><span class="portfolio__desc">informUnity - агенство по&nbsp;внедрению Bitrix24 для&nbsp;бизнеса</span>
+                                                <span
+                                                class="portfolio__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span><span class="btn__text">Подробнее</span></span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio__slide shop swiper-slide">
+                                            <a class="portfolio__item shop" href="case.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio__img1.webp">
+                                                        <img src="/app/img/portfolio__img1.jpg" />
+                                                </picture><span class="portfolio__info"><span class="portfolio__info-wrap"><span class="portfolio__name color-blue">Интернет-магазин</span><span class="portfolio__desc">SUNDAY - продажа солнцезащитных систем</span>
+                                                <span
+                                                class="portfolio__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span><span class="btn__text">Подробнее</span></span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio__slide landing swiper-slide">
+                                            <a class="portfolio__item landing" href="case.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio__img2.webp">
+                                                        <img src="/app/img/portfolio__img2.jpg" />
+                                                </picture><span class="portfolio__info"><span class="portfolio__info-wrap"><span class="portfolio__name color-blue">Landing Page</span><span class="portfolio__desc">Ridebook - акция для&nbsp;водителей Uber и&nbsp;Lyft</span>
+                                                <span
+                                                class="portfolio__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span><span class="btn__text">Подробнее</span></span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio__slide shop swiper-slide">
+                                            <a class="portfolio__item shop" href="case.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio__img1.webp">
+                                                        <img src="/app/img/portfolio__img1.jpg" />
+                                                </picture><span class="portfolio__info"><span class="portfolio__info-wrap"><span class="portfolio__name color-blue">Интернет-магазин</span><span class="portfolio__desc">TTFY - одежда для&nbsp;фитнеса</span><span class="portfolio__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                <span
+                                                class="btn__text">Подробнее</span>
+                                                    </span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio__slide design swiper-slide">
+                                            <a class="portfolio__item design" href="case.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio__img2.webp">
+                                                        <img src="/app/img/portfolio__img2.jpg" />
+                                                </picture><span class="portfolio__info"><span class="portfolio__info-wrap"><span class="portfolio__name color-blue">HTML верстка</span><span class="portfolio__desc">informUnity - агенство по&nbsp;внедрению Bitrix24 для&nbsp;бизнеса</span>
+                                                <span
+                                                class="portfolio__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span><span class="btn__text">Подробнее</span></span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio__slide design swiper-slide">
+                                            <a class="portfolio__item design" href="case.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio__img2.webp">
+                                                        <img src="/app/img/portfolio__img2.jpg" />
+                                                </picture><span class="portfolio__info"><span class="portfolio__info-wrap"><span class="portfolio__name color-blue">Интернет-магазин</span><span class="portfolio__desc">SUNDAY - продажа солнцезащитных систем</span>
+                                                <span
+                                                class="portfolio__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span><span class="btn__text">Подробнее</span></span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio__slide landing swiper-slide">
+                                            <a class="portfolio__item landing" href="case.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio__img2.webp">
+                                                        <img src="/app/img/portfolio__img2.jpg" />
+                                                </picture><span class="portfolio__info"><span class="portfolio__info-wrap"><span class="portfolio__name color-blue">Landing Page</span><span class="portfolio__desc">Ridebook - акция для&nbsp;водителей Uber и&nbsp;Lyft</span>
+                                                <span
+                                                class="portfolio__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span><span class="btn__text">Подробнее</span></span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="main__bottom flex"><a class="main__btn btn btn_fill btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">наши проекты</span></a><a class="main__btn btn btn_stroke btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">связь с&nbsp;нами</span></a>
+                                <div class="portfolio__nav flex flex_vertical flex_center">
+                                    <div class="portfolio__arrow portfolio__arrow_prev">
+                                        <svg class="icon icon-prev prev" viewBox="0 0 9 16">
+                                            <use xlink:href="/app/icons/sprite.svg#prev"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="portfolio__pagin"></div>
+                                    <div class="portfolio__arrow portfolio__arrow_next">
+                                        <svg class="icon icon-next next" viewBox="0 0 9 16">
+                                            <use xlink:href="/app/icons/sprite.svg#next"></use>
+                                        </svg>
+                                    </div>
                                 </div>
+                                <!-- - +e.list.flex+e.column
+	+e.item.A(href="case.html")
+		img(src="/img/portfolio__img1.jpg")
+		+e.info
+			+e.info-wrap
+				+e.name.color-blue Интернет-магазин
+				+e.desc
+					| TTFY - одежда для&nbsp;фитнеса
+				+e.info-btn.btn._fill.btn__
+					+e.back.js-circles.SPAN
+					+e.text Подробнее
++e.column
+	+e.item.A(href="case.html")
+		img(src="/img/portfolio__img2.jpg")
+		+e.info
+			+e.info-wrap
+				+e.name.color-blue HTML верстка
+				+e.desc
+					| informUnity - агенство по&nbsp;внедрению Bitrix24 для&nbsp;бизнеса
+				+e.info-btn.btn._fill.btn__
+					+e.back.js-circles.SPAN
+					+e.text Подробнее
++e.column
+	+e.item.A(href="case.html")
+		img(src="/img/portfolio__img1.jpg")
+		+e.info
+			+e.info-wrap
+				+e.name.color-blue Интернет-магазин
+				+e.desc
+					| SUNDAY - продажа солнцезащитных систем
+				+e.info-btn.btn._fill.btn__
+					+e.back.js-circles.SPAN
+					+e.text Подробнее
++e.column
+	+e.item.A(href="case.html")
+		img(src="/img/portfolio__img2.jpg")
+		+e.info
+			+e.info-wrap
+				+e.name.color-blue Landing Page
+				+e.desc
+					| Ridebook - акция для&nbsp;водителей Uber и&nbsp;Lyft
+				+e.info-btn.btn._fill.btn__
+					+e.back.js-circles.SPAN
+					+e.text Подробнее-->
+                                <div class="portfolio__bottom"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide" id="blog">
-                        <div class="main">
-                            <div class="main__wrap wrap">
-                                <h1 class="main__title color-blue h1">WE3CUBE STUDIO</h1>
-                                <div class="main__desc">
-                                    <p>Дизайн веб продуктов.</p>
-                                    <p>Решим задачи связанные с&nbsp;дизайном
-                                        <br>сайтов, приложений, фирменного стиля.</p>
-                                    <p>Продвинем сайт в&nbsp;поисковиках.</p>
-                                    <p>Наполним контентом сайт.</p>
+                    <div class="page-slider__slide swiper-slide" id="blog">
+                        <div class="blog">
+                            <div class="blog__wrap wrap">
+                                <h2 class="blog__title h1"><span class="color-blue">Блог </span>о&nbsp;веб-разработке</h2>
+                                <div class="blog__slider swiper-container">
+                                    <div class="blog__slider-wrapper swiper-wrapper">
+                                        <div class="blog__slide swiper-slide">
+                                            <a class="blog__item" href="post.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/news__thumb1.webp">
+                                                        <img src="/app/img/news__thumb1.jpg" />
+                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">CSS-препроцессоры против CSS1</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                <span
+                                                class="btn__text">Подробнее</span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="blog__slide swiper-slide">
+                                            <a class="blog__item" href="post.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/news__thumb2.webp">
+                                                        <img src="/app/img/news__thumb2.jpg" />
+                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit2</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                <span
+                                                class="btn__text">Подробнее</span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="blog__slide swiper-slide">
+                                            <a class="blog__item" href="post.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/news__thumb1.webp">
+                                                        <img src="/app/img/news__thumb1.jpg" />
+                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">CSS-препроцессоры против CSS3</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                <span
+                                                class="btn__text">Подробнее</span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="blog__slide swiper-slide">
+                                            <a class="blog__item" href="post.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/news__thumb2.webp">
+                                                        <img src="/app/img/news__thumb2.jpg" />
+                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit4</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                <span
+                                                class="btn__text">Подробнее</span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="blog__slide swiper-slide">
+                                            <a class="blog__item" href="post.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/news__thumb1.webp">
+                                                        <img src="/app/img/news__thumb1.jpg" />
+                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">CSS-препроцессоры против CSS5</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                <span
+                                                class="btn__text">Подробнее</span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="blog__slide swiper-slide">
+                                            <a class="blog__item" href="post.html">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/news__thumb2.webp">
+                                                        <img src="/app/img/news__thumb2.jpg" />
+                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit6</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                <span
+                                                class="btn__text">Подробнее</span>
+                                                    </span>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="main__bottom flex"><a class="main__btn btn btn_fill btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">наши проекты</span></a><a class="main__btn btn btn_stroke btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">связь с&nbsp;нами</span></a>
+                                <div class="blog__nav flex flex_vertical flex_center">
+                                    <div class="blog__arrow blog__arrow_prev">
+                                        <svg class="icon icon-prev prev" viewBox="0 0 9 16">
+                                            <use xlink:href="/app/icons/sprite.svg#prev"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="blog__pagin"></div>
+                                    <div class="blog__arrow blog__arrow_next">
+                                        <svg class="icon icon-next next" viewBox="0 0 9 16">
+                                            <use xlink:href="/app/icons/sprite.svg#next"></use>
+                                        </svg>
+                                    </div>
                                 </div>
+                                <!-- - +e.list.flex+e.column
+	+e.item.A(href="case.html")
+		img(src="/img/portfolio__img1.jpg")
+		+e.info
+			+e.info-wrap
+				+e.name.color-blue Интернет-магазин
+				+e.desc
+					| TTFY - одежда для&nbsp;фитнеса
+				+e.info-btn.btn._fill.btn__
+					+e.back.js-circles.SPAN
+					+e.text Подробнее
++e.column
+	+e.item.A(href="case.html")
+		img(src="/img/portfolio__img2.jpg")
+		+e.info
+			+e.info-wrap
+				+e.name.color-blue HTML верстка
+				+e.desc
+					| informUnity - агенство по&nbsp;внедрению Bitrix24 для&nbsp;бизнеса
+				+e.info-btn.btn._fill.btn__
+					+e.back.js-circles.SPAN
+					+e.text Подробнее
++e.column
+	+e.item.A(href="case.html")
+		img(src="/img/portfolio__img1.jpg")
+		+e.info
+			+e.info-wrap
+				+e.name.color-blue Интернет-магазин
+				+e.desc
+					| SUNDAY - продажа солнцезащитных систем
+				+e.info-btn.btn._fill.btn__
+					+e.back.js-circles.SPAN
+					+e.text Подробнее
++e.column
+	+e.item.A(href="case.html")
+		img(src="/img/portfolio__img2.jpg")
+		+e.info
+			+e.info-wrap
+				+e.name.color-blue Landing Page
+				+e.desc
+					| Ridebook - акция для&nbsp;водителей Uber и&nbsp;Lyft
+				+e.info-btn.btn._fill.btn__
+					+e.back.js-circles.SPAN
+					+e.text Подробнее-->
+                                <div class="blog__bottom"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide" id="contact">
-                        <div class="main">
-                            <div class="main__wrap wrap">
-                                <h1 class="main__title color-blue h1">WE3CUBE STUDIO</h1>
-                                <div class="main__desc">
-                                    <p>Дизайн веб продуктов.</p>
-                                    <p>Решим задачи связанные с&nbsp;дизайном
-                                        <br>сайтов, приложений, фирменного стиля.</p>
-                                    <p>Продвинем сайт в&nbsp;поисковиках.</p>
-                                    <p>Наполним контентом сайт.</p>
-                                </div>
-                                <div class="main__bottom flex"><a class="main__btn btn btn_fill btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">наши проекты</span></a><a class="main__btn btn btn_stroke btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">связь с&nbsp;нами</span></a>
+                    <div class="page-slider__slide swiper-slide" id="contact">
+                        <div class="contact">
+                            <div class="contact__wrap wrap">
+                                <h2 class="contact__title h1"><span class="color-blue">Контакты </span></h2>
+                                <div class="contact__row flex flex_vertical flex_justify">
+                                    <form class="form contact__form" action="/app/mail">
+                                        <h3 class="form__title h3"><span class="color-blue">Поговорим </span>о&nbsp;будущем проекте</h3>
+                                        <div class="form__field">
+                                            <input class="form__input" name="name" type="text" placeholder="Имя" />
+                                        </div>
+                                        <div class="form__field">
+                                            <input class="form__input" name="phone" type="tel" placeholder="Телефон" />
+                                        </div>
+                                        <div class="form__field">
+                                            <input class="form__input" name="email" type="email" placeholder="E-mail" />
+                                        </div>
+                                        <div class="form__field">
+                                            <input class="form__input" name="url" type="url" placeholder="Ссылка на&nbsp;сайт(если есть)" />
+                                        </div>
+                                        <div class="form__field">
+                                            <input class="form__input" name="mess" type="text" placeholder="Детали проекта" />
+                                        </div>
+                                        <div class="form__bottom flex flex_end">
+                                            <button class="form__btn btn btn_fill btn" type="submit"><span class="btn__back js-circles"></span>
+                                                <div class="btn__text">ОТПРАВИТЬ</div>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div class="contact__map">
+                                        <img src="/app/img/undraw_world_9iqb.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +546,7 @@
     </div>
     <div class="modals mfp-hide" id="recall"></div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1582218253213"></script>
+    <script src="/app/js/app.js?v=1582526607472"></script>
 </body>
 
 </html>

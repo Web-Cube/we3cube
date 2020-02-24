@@ -82,6 +82,10 @@ a, buuton, input, textarea, .icon {
 	&_center{
 		justify-content: center;
 	}
+	
+	&_end{
+		justify-content: flex-end;
+	}
 
 	&_inline{
 		display: inline-flex;

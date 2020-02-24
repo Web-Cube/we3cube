@@ -4,17 +4,17 @@ append vars
 	- title = 'Главная'
 
 block content
-	include ../layouts/preloader
+	//include ../layouts/preloader
 	img.page-bg(src="app/img/main__cube.svg")
 	.page-slider.swiper-container
-		.swiper-wrapper
-			.swiper-slide#main
+		.page-slider__wrapper.swiper-wrapper
+			.page-slider__slide.swiper-slide#main
 				include ../layouts/main
-			.swiper-slide#about
-				include ../layouts/main
-			.swiper-slide#portfolio
-				include ../layouts/main
-			.swiper-slide#blog
-				include ../layouts/main
-			.swiper-slide#contact
-				include ../layouts/main
+			.page-slider__slide.swiper-slide#about
+				include ../layouts/category
+			.page-slider__slide.swiper-slide#portfolio
+				include ../layouts/portfolio
+			.page-slider__slide.swiper-slide#blog
+				include ../layouts/blog
+			.page-slider__slide.swiper-slide#contact
+				include ../layouts/contact

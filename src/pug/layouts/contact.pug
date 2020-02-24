@@ -1,0 +1,25 @@
++b.contact
+	+e.wrap.wrap
+		+e.H2.title.h1
+			span.color-blue Контакты 
+		+e.row.flex._vertical._justify
+			+b.FORM.form.contact__form(action="/app/mail")
+				+e.H3.title.h3
+					span.color-blue Поговорим 
+					| о будущем проекте
+				+e.field
+					+e.INPUT.input(name="name", type="text" placeholder="Имя")
+				+e.field
+					+e.INPUT.input(name="phone", type="tel" placeholder="Телефон")
+				+e.field
+					+e.INPUT.input(name="email", type="email" placeholder="E-mail")
+				+e.field
+					+e.INPUT.input(name="url", type="url" placeholder="Ссылка на сайт(если есть)")
+				+e.field
+					+e.INPUT.input(name="mess", type="text" placeholder="Детали проекта")
+				+e.bottom.flex._end
+					+e.BUTTON.btn.btn._fill.btn__(type="submit")
+						+e.back.js-circles.SPAN
+						+e.text ОТПРАВИТЬ
+			+e.map
+				img(src="/app/img/undraw_world_9iqb.svg", alt="")

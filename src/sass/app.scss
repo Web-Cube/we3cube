@@ -1,5 +1,12 @@
 $blue: #1871B7;
 
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
+}
+
 @import "mixins/**/*.scss";
 @import "defaults/**/*.scss";
 @import "modules/**/*.scss";

@@ -28,4 +28,14 @@ var thousandSeparator = str => {
     return output;
 };
 
-export { getRandomInt, requireAll, animationEnd, transitionEnd, thousandSeparator };
+var openPage = function() {
+	let windowHash = window.location.hash;
+	let index = $(".header__mobile-nav ul li a[href='" + windowHash + "']").closest("li").index();
+	if ( windowHash.length > 0 ) {
+		setTimeout(function(){
+			$(".pagin .swiper-pagination-bullet:eq(" + index + ")").click();
+		},1000);
+	}
+};
+
+export { getRandomInt, requireAll, animationEnd, transitionEnd, thousandSeparator, openPage };

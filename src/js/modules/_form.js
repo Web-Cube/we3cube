@@ -15,7 +15,7 @@ $(()=>{
 	var selector = document.querySelectorAll("input[name='phone']");
 
 	var im = new Inputmask({
-		"mask": "+7 (999) 999-99-99",
+		"mask": "+38 (999) 999-99-99",
 		clearMaskOnLostFocus: true,
 		clearIncomplete: true			
 	});

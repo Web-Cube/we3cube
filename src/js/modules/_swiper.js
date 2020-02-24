@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import {openPage} from '../functions';
 
 (() => {
 	
@@ -16,15 +17,6 @@ import Swiper from 'swiper';
 			allowTouchMove: false,
 			onlyExternal: true,
 			spaceBetween: 0,
-			breakpoints: {
-				0: {
-					loop: false,
-					spaceBetween: 0
-				},
-				1024: {
-					slidesPerView: 'auto',
-				},
-			},
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true,
 
@@ -46,6 +38,8 @@ import Swiper from 'swiper';
 
 		});
 		
+		openPage();
+		
 	} else {
 		$(window).scroll(function(){
 			if ( $(window).scrollTop() > 100 ) {
@@ -55,4 +49,120 @@ import Swiper from 'swiper';
 			}
 		});
 	}
+	
+	let portfolio = new Swiper('.portfolio__slider', {
+		slidesPerView: 'auto',
+		loopedSlides: 4,
+		slidesPerGroup: 4,
+		speed: 0,
+		loop: false,
+		spaceBetween: 0,
+		noSwiping: true,
+		allowTouchMove: false,
+		onlyExternal: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		pagination: {
+        el: '.portfolio__pagin',
+			clickable: true,
+			renderBullet: function (index, className) {
+			  return '<span class="' + className + '">' + (index + 1) + '</span>';
+			},
+		},
+		navigation: {
+        	nextEl: '.portfolio__arrow_next',
+        	prevEl: '.portfolio__arrow_prev',
+      	},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			  	loopedSlides: 1,
+				slidesPerGroup: 1,
+				noSwiping: false,
+				allowTouchMove: true,
+				onlyExternal: false,
+				speed: 300
+			},
+			400: {
+				slidesPerView: 2,
+			  	loopedSlides: 2,
+				slidesPerGroup: 2,
+			},
+			479: {
+				slidesPerView: 3,
+			  	loopedSlides: 3,
+				slidesPerGroup: 3,
+				noSwiping: false,
+				allowTouchMove: true,
+				onlyExternal: false,
+				speed: 300
+			},
+			740: {
+				slidesPerView: 3,
+			  	loopedSlides: 3,
+				slidesPerGroup: 3,
+			},
+			769: {
+				slidesPerView: 'auto',
+			  	loopedSlides: 4,
+				slidesPerGroup: 4,
+			},
+		}
+	});
+	
+	let blog = new Swiper('.blog__slider', {
+		slidesPerView: 4,
+		loopedSlides: 4,
+		slidesPerGroup: 4,
+		speed: 300,
+		loop: false,
+		spaceBetween: 0,
+		noSwiping: true,
+		allowTouchMove: false,
+		onlyExternal: true,
+		pagination: {
+        el: '.blog__pagin',
+			clickable: true,
+			renderBullet: function (index, className) {
+			  return '<span class="' + className + '">' + (index + 1) + '</span>';
+			},
+		},
+		navigation: {
+        	nextEl: '.blog__arrow_next',
+        	prevEl: '.blog__arrow_prev',
+      	},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			  	loopedSlides: 1,
+				slidesPerGroup: 1,
+				noSwiping: false,
+				allowTouchMove: true,
+				onlyExternal: false,
+			},
+			400: {
+				slidesPerView: 2,
+			  	loopedSlides: 2,
+				slidesPerGroup: 2,
+			},
+			479: {
+				slidesPerView: 3,
+			  	loopedSlides: 3,
+				slidesPerGroup: 3,
+				noSwiping: false,
+				allowTouchMove: true,
+				onlyExternal: false,
+			},
+			740: {
+				slidesPerView: 3,
+			  	loopedSlides: 3,
+				slidesPerGroup: 3,
+			},
+			769: {
+				slidesPerView: 4,
+			  	loopedSlides: 4,
+				slidesPerGroup: 4,
+			},
+		}
+	});
 })($);

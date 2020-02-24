@@ -1,0 +1,35 @@
+.form {
+	&__title {
+		padding-bottom: 10rem;
+	}
+	&__input {
+		width: 100%;
+		height: block;
+		height: 41rem;
+		background: none;
+		border: 0;
+		border-bottom: 1px solid $blue;
+		font-size: 18rem;
+		line-height: 21rem;
+		font-family: 'Roboto Mono';
+		color: #6290B4;
+		@include placeholder {
+			color: #6290B4;
+		}
+	}
+	&__field {
+		margin-top: 7rem;
+		&.error {
+			.form__input {
+				color: crimson;
+				border-color: crimson;
+				@include placeholder {
+					color: crimson;
+				}
+			}
+		}
+	}
+	&__btn {
+		margin-top: 40rem;
+	}
+}

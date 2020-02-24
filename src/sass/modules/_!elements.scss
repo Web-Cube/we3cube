@@ -14,6 +14,7 @@
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
+	border: 0;
 	&_fill {
 		background: $blue;
 		.b-circle{
@@ -122,6 +123,31 @@
 			stroke: #fff;
 			stroke-width: 20;
 		}
+	}
+}
+
+.tag-list {
+	margin-top: 15rem;
+	&__item {
+		margin-right: 15rem;
+		margin-bottom: 12rem;
+	}
+}
+
+.tag {
+	font-size: 15rem;
+	line-height: 1;
+	font-weight: 300;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 27rem;
+	padding: 0 10rem 0 10rem;
+	border: 1px solid $blue;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	&:hover, &.is-active {
+		background-color: $blue;
 	}
 }
 
