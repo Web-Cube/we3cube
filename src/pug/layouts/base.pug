@@ -58,18 +58,11 @@ html(class=html.classList)&attributes(html.attrs)
 				function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
-		.fullpage
-			.fullpage__top
-				block header 
-					include header
-			.fullpage__center
-				block content
-			.fullpage__bottom
-				block footer 
-					include footer
+		block content
 		block popup 
 			include modals
 		block scripts
-			script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+			script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+			script(src="https://cdn.jsdelivr.net/npm/vue")
 			script(src="/js/app.js?v=" + Date.now())
 		block body-end

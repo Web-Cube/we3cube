@@ -1,7 +1,4 @@
 <?
-	if(!isset($_POST['phone']))
-		die;
-
 	require('phpmailer/class.phpmailer.php');
 
 	$mail = new PHPMailer;
@@ -9,72 +6,59 @@
 	$mail->isMail();
 
 	$dt = date("d.m.y");
-	$number = 0;
 
-	
-	$f = fopen("numbervar.txt", "r");
-	$number = intval(fgets($f)); 
-	fclose($f);
-
-	$servername = '«SMELO»';
+	$servername = 'we3cube.pro';
 
 	$title = 'Заявка с сайта '. $servername . ' — ' . $dt; 
 
 	$message = '<table width="100%" border="1">';
 	
-	$message .= '<tr>';
-	$message .= '<td width="45%"><b>Заявка</b></td>';
-	$message .= '<td>' . $dt . ' — ' . $number ."</td>";
-	$message .= '</tr>';
-
-	$message .= '<tr>';
-	$message .= '<td width="45%"><b>'. 'Форма' . '</b></td>';
-	$message .= '<td>' .  $_POST['form'] . "</td>";
-	$message .= '</tr>';
-
-	if (isset($_POST['user'])){
+	if (isset($_POST['name'])){
 		$message .= '<tr>';
-		$message .= '<td width="45%"><b>'. 'Имя' . '</b></td>';
-		$message .= '<td>' .  $_POST['user'] . "</td>";
-		$message .= '</tr>';		
+		$message .= '<td width="45%"><b>Имя</b></td>';
+		$message .= '<td>' .  $_POST['name'] . '</td>';
+		$message .= '</tr>';
 	}
-
+	
+	$message .= '<tr>';
+	$message .= '<td width="45%"><b>Телефон</b></td>';
+	$message .= '<td>' .  $_POST['phone'] . '</td>';
+	$message .= '</tr>';
+	
 	if (isset($_POST['email'])){
 		$message .= '<tr>';
-		$message .= '<td width="45%"><b>'. 'E-mail' . '</b></td>';
-		$message .= '<td>' .  $_POST['email'] . "</td>";
-		$message .= '</tr>';		
+		$message .= '<td width="45%"><b>Email</b></td>';
+		$message .= '<td>' .  $_POST['email'] . '</td>';
+		$message .= '</tr>';
 	}
-
-	$message .= '<tr>';
-	$message .= '<td width="45%"><b>'. 'Телефон' . '</b></td>';
-	$message .= '<td>'  . ' <a href="tel:' . $_POST['phone']  . '">' . $_POST['phone']  . "</a>" .  "</td>";
-	$message .= '</tr>';		
-
-	$message .= '<tr>';
-	$message .= '<td width="45%"><b>'. 'Страница' . '</b></td>';
-	$message .= '<td>' .  $_SERVER['HTTP_REFERER'] . "</td>";
-	$message .= '</tr>';
+	
+	if (isset($_POST['url'])){
+		$message .= '<tr>';
+		$message .= '<td width="45%"><b>Ссылка на сайт</b></td>';
+		$message .= '<td>' .  $_POST['url'] . '</td>';
+		$message .= '</tr>';
+	}
+	
+	if (isset($_POST['mess'])){
+		$message .= '<tr>';
+		$message .= '<td width="45%"><b>Детали проекта</b></td>';
+		$message .= '<td>' .  $_POST['mess'] . '</td>';
+		$message .= '</tr>';
+	}
 
 	$message .= '</table>';
  
-	$mail->From = 'noreply@admin';
-	$mail->FromName = 'SMELO';
+	$mail->From = 'info@we3cube.pro';
+	$mail->FromName = 'we3cube.pro';
 	$mail->CharSet = 'UTF-8';
 
-	$mail->addAddress('smelo.ekaterinburg@mail.ru');
+	$mail->addAddress('info@we3cube.pro,misha1oboronov@gmail.com');
 
 	$mail->isHTML(true);  
 
 	$mail->Subject = $title;
 	$mail->Body    = $message;
-
-	if($mail->send()) {
-		$f = fopen("numbervar.txt", "w");
-		$next = $number + 1;
-		fwrite($f, $next);
-		fclose($f);
-	}
-
+	
+	$mail->send();
 
 ?>       

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Кейс</title>
+    <link rel="stylesheet" href="/app/css/app.css?v=1583754718619">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body>
+    <!--include ../layouts/preloader-->
+    <div class="fullpage">
+        <div class="fullpage__top">
+            <header class="header">
+                <div class="header__wrap wrap flex flex_vertical flex_justify">
+                    <div class="header__left flex flex_vertical">
+                        <a class="header__logo color-blue" href="main.html" title="we3cube.pro - разработка веб сайтов">
+                            <img class="header__logo-img" src="app/img/logo.svg" alt="we3cube.pro - разработка веб сайтов" title="" /><span class="header__logo-text">WE3CUBE</span>
+                        </a>
+                        <div class="header__nav swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li><a href="/main.html#main">Главная</a>
+                                </li>
+                                <li><a href="/main.html#about">Услуги</a>
+                                </li>
+                                <li><a href="/main.html#portfolio">Наши проекты</a>
+                                </li>
+                                <li><a href="/main.html#blog">Блог</a>
+                                </li>
+                                <li><a href="/main.html#contact">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__right"><a class="header__phone" href="tel:+380981234567"><span class="color-blue">+38 </span>098 12 34 567</a>
+                        <br><a class="header__email" href="mailto:info@we3cube.pro"><span class="color-blue">info</span>@we3cube.pro</a>
+                    </div>
+                    <div class="header__burger burger" v-on:click="burger__text = !burger__text">
+                        <div class="burger__text">{{ burger__text ? 'Меню' : 'Закрыть' }}</div>
+                        <div class="burger__wrap">
+                            <div class="burger__line"></div>
+                            <div class="burger__line"></div>
+                            <div class="burger__line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="header__mobile-wrap wrap">
+                        <div class="header__mobile-nav">
+                            <ul>
+                                <li><a href="/main.html#main">Главная</a>
+                                </li>
+                                <li><a href="/main.html#about">Услуги</a>
+                                </li>
+                                <li><a href="/main.html#portfolio">Наши проекты</a>
+                                </li>
+                                <li><a href="/main.html#blog">Блог</a>
+                                </li>
+                                <li><a href="/main.html#contact">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__mobile-bottom">
+                            <div class="header__mobile-contact"><a class="header__mobile-phone" href="tel:+380981234567"><span class="color-blue">+38 </span>098 12 34 567</a>
+                                <br><a class="header__mobile-email" href="mailto:info@we3cube.pro"><span class="color-blue">info</span>@we3cube.pro</a>
+                            </div>
+                            <div class="header__mobile-social flex flex_vertical social"><a class="social__link" href="viber://add?number=380988481269" target="_blank"><span class="social__icon"><svg class="icon icon-viber viber" viewBox="0 0 192 210.0428"><use xlink:href="/app/icons/sprite.svg#viber"></use></svg></span></a>
+                                <a
+                                class="social__link" href="tg://resolve?domain=w3bcube" target="_blank"><span class="social__icon"><svg class="icon icon-telegram telegram" viewBox="0 0 512 512"><use xlink:href="/app/icons/sprite.svg#telegram"></use></svg></span>
+                                    </a><a class="social__link" href="https://wa.me/380987378427" target="_blank"><span class="social__icon"><svg class="icon icon-whatsapp whatsapp" viewBox="0 0 90 90"><use xlink:href="/app/icons/sprite.svg#whatsapp"></use></svg></span></a>
+                                    <a
+                                    class="social__link" href="https://m.me/misha.oboronov" target="_blank"><span class="social__icon"><svg class="icon icon-fb fb" viewBox="0 0 512 512"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span>
+                                        </a><a class="social__link" href="skype:web-cube1" target="_blank"><span class="social__icon"><svg class="icon icon-skype skype" viewBox="0 0 512 512"><use xlink:href="/app/icons/sprite.svg#skype"></use></svg></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="fullpage__center">
+            <div class="case">
+                <div class="case__head">
+                    <video autoplay="autoplay" loop="true">
+                        <source src="/bounty_promo.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+                            <!-- source(src='/bounty_promo.webm', type='video/webm; codecs="vp8, vorbis"')-->
+                    </video>
+                    <div class="case__head-wrap wrap">
+                        <div class="case__head-tag tag">Портфолио</div>
+                        <div class="case__head-title">Bounty Invest LTD</div>
+                        <h1 class="case__head-desc h3">Разработка сайта для&nbsp;инвестиционной компании Bounty</h1>
+                        <div class="case__head-bottom flex flex_center"><a class="case__head-btn btn btn_stroke btn" href="https://bountyinvest.com" target="_blank"><span class="btn__back js-circles"></span><span class="btn__text">Посмотреть сайт</span></a><a class="case__head-btn btn btn_fill btn js-scroll-to"
+                            href="#contact"><span class="btn__back js-circles"></span><span class="btn__text">Хочу такой же</span></a>
+                        </div>
+                    </div>
+                    <div class="case__scroll-icon scroll-icon"></div>
+                </div>
+                <div class="case__content">
+                    <div class="wrap">
+                        <p>CRM “Срибна Роса” — это автоматизированная система по&nbsp;приему и&nbsp;выполнению заказов по&nbsp;доставке воды, основной целью которой является повышение лояльности клиентов и&nbsp;увеличение степени их удовлетворенности услугами
+                            компании за&nbsp;счет оперативной обработки заявок и&nbsp;быстрого выявления проблем в&nbsp;работе.</p>
+                        <h2>Краткое описание проекта</h2>
+                        <p>Перед нашей командой стояла задача разработать CRM-технологию для&nbsp;удобного и&nbsp;эффективного ведения бизнес-процессов компании, увеличения продаж с&nbsp;возможностью проведения анализа информации о&nbsp;клиентах и&nbsp;сотрудниках
+                            за&nbsp;счет обработки статистических данных. В рамках работы над&nbsp;проектом нами были выделены следующие задачи:</p>
+                        <h3>Задачи</h3>
+                        <ul>
+                            <li>создание единой клиентской базы, содержащей всю историю взаимоотношений с&nbsp;клиентами с&nbsp;возможностью управления данной информацией,</li>
+                            <li>создание единой клиентской базы, содержащей всю историю взаимоотношений с&nbsp;клиентами с&nbsp;возможностью управления данной информацией,</li>
+                            <li>создание единой клиентской базы, содержащей всю историю взаимоотношений с&nbsp;клиентами с&nbsp;возможностью управления данной информацией,</li>
+                            <li>создание единой клиентской базы, содержащей всю историю взаимоотношений с&nbsp;клиентами с&nbsp;возможностью управления данной информацией,</li>
+                        </ul>
+                        <h2>Результат</h2>
+                        <ol>
+                            <li>создание единой клиентской базы, <a href="#">содержащей всю историю</a> взаимоотношений с&nbsp;клиентами с&nbsp;возможностью управления данной информацией,</li>
+                            <li>создание единой клиентской базы, содержащей всю историю взаимоотношений с&nbsp;клиентами с&nbsp;возможностью управления данной информацией,</li>
+                            <li>создание единой клиентской базы, содержащей всю историю взаимоотношений с&nbsp;клиентами с&nbsp;возможностью управления данной информацией,</li>
+                            <li>создание единой клиентской базы, содержащей всю историю взаимоотношений с&nbsp;клиентами с&nbsp;возможностью управления данной информацией,</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="case__layouts">
+                    <picture>
+                        <source type="image/webp" srcset="/app/img/bounty_mockup.webp">
+                            <img src="/app/img/bounty_mockup.jpg" />
+                    </picture>
+                    <div class="case__layouts-bottom flex flex_center"><a class="case__head-btn btn btn_stroke btn" href="https://bountyinvest.com" target="_blank"><span class="btn__back js-circles"></span><span class="btn__text">Посмотреть сайт</span></a>
+                    </div>
+                </div>
+                <div class="case__contact contact" id="contact">
+                    <div class="contact__wrap wrap">
+                        <div class="contact__row flex flex_vertical flex_justify">
+                            <form class="form contact__form" action="/app/mail">
+                                <h3 class="form__title h3"><span class="color-blue">Поговорим </span>о&nbsp;будущем проекте</h3>
+                                <div class="form__field">
+                                    <input class="form__input" name="name" type="text" placeholder="Имя" />
+                                </div>
+                                <div class="form__field">
+                                    <input class="form__input" name="phone" type="tel" placeholder="Телефон" />
+                                </div>
+                                <div class="form__field">
+                                    <input class="form__input" name="email" type="email" placeholder="E-mail" />
+                                </div>
+                                <div class="form__field">
+                                    <input class="form__input" name="url" type="url" placeholder="Ссылка на&nbsp;сайт(если есть)" />
+                                </div>
+                                <div class="form__field">
+                                    <input class="form__input" name="mess" type="text" placeholder="Детали проекта" />
+                                </div>
+                                <div class="form__bottom flex flex_end">
+                                    <button class="form__btn btn btn_fill btn" type="submit"><span class="btn__back js-circles"></span>
+                                        <div class="btn__text">ОТПРАВИТЬ</div>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="contact__map">
+                                <img src="/app/img/undraw_world_9iqb.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fullpage__bottom">
+            <footer class="footer footer_page">
+                <div class="footer__wrap wrap flex flex_vertical flex_justify">
+                    <div class="footer__left">
+                        <div class="footer__copyright"><span class="footer__copyright-icon">© </span>2016-2020 Веб студия We3-Cube</div>
+                    </div>
+                    <div class="footer__right">
+                        <div class="footer__text">Связаться с&nbsp;нами:</div>
+                        <div class="footer__social flex flex_vertical social"><a class="social__link" href="viber://add?number=380988481269" target="_blank"><span class="social__icon"><svg class="icon icon-viber viber" viewBox="0 0 192 210.0428"><use xlink:href="/app/icons/sprite.svg#viber"></use></svg></span></a>
+                            <a
+                            class="social__link" href="tg://resolve?domain=w3bcube" target="_blank"><span class="social__icon"><svg class="icon icon-telegram telegram" viewBox="0 0 512 512"><use xlink:href="/app/icons/sprite.svg#telegram"></use></svg></span>
+                                </a><a class="social__link" href="https://wa.me/380987378427" target="_blank"><span class="social__icon"><svg class="icon icon-whatsapp whatsapp" viewBox="0 0 90 90"><use xlink:href="/app/icons/sprite.svg#whatsapp"></use></svg></span></a>
+                                <a
+                                class="social__link" href="https://m.me/misha.oboronov" target="_blank"><span class="social__icon"><svg class="icon icon-fb fb" viewBox="0 0 512 512"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span>
+                                    </a><a class="social__link" href="skype:web-cube1" target="_blank"><span class="social__icon"><svg class="icon icon-skype skype" viewBox="0 0 512 512"><use xlink:href="/app/icons/sprite.svg#skype"></use></svg></span></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="modals mfp-hide" id="thank">
+        <img class="modals__icon" src="/app/img/undraw_completed.svg" alt="" role="presentation" />
+        <div class="modals__content">
+            <div class="modals__title h1 color-blue">Спасибо!</div>
+            <div class="modals__desc p">Ваша заявка отправлена.
+                <br>В ближайшее время мы с&nbsp;вами свяжемся.</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="/app/js/app.js?v=1583754718632"></script>
+</body>
+
+</html>

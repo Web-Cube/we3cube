@@ -52,13 +52,14 @@ $(()=>{
 			submitHandler: (form) => {
 
 				var data = $(form).serialize();
-
+				
 				$.ajax({
 					type: 'POST',
 					url: '/app/mail/',
 					data: data,
 					success: function(data) {
 						$(form)[0].reset();
+						thank();
 					}
 				});
 
@@ -71,6 +72,30 @@ $(()=>{
 			}		
 		})
 
-	})
+	});
+	
+	function thank() {
+		$.magnificPopup.open({
+			tClose: 'Закрыть',
+			removalDelay: 600,
+			fixedContentPos: true,
+			fixedBgPos: true,
+			overflowY: 'hidden',			
+			closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close close" viewBox="0 0 612 612"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
+			mainClass: 'css-modal-animate',				
+			items: {
+				src: '#thank',
+				type: 'inline'
+			},
+			callbacks: {
+				beforeOpen: () => {
+					$('body').addClass('is-modal-open')
+				},
+				beforeClose: () => {
+					$('body').removeClass('is-modal-open')
+				}
+			}
+		}, 0);
+	}
 
 })

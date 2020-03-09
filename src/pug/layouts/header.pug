@@ -7,8 +7,8 @@
 			+e.nav.swiper-container
 				ul.swiper-wrapper
 					li.swiper-slide(data-href="#main") Главная
-					li.swiper-slide(data-href="#about") О нас
-					li.swiper-slide(data-href="#portfolio") Портфолио
+					li.swiper-slide(data-href="#about") Услуги
+					li.swiper-slide(data-href="#portfolio") Наши проекты
 					li.swiper-slide(data-href="#blog") Блог
 					li.swiper-slide(data-href="#contact") Контакты
 		+e.right
@@ -19,9 +19,8 @@
 			+e.A.email(href="mailto:info@we3cube.pro")
 				span.color-blue info
 				| @we3cube.pro
-		+e.burger.burger__
-			+e.text._open Меню
-			+e.text._close Закрыть
+		+e.burger.burger__(v-on:click="burger__text = !burger__text")
+			+e.text {{ burger__text ? 'Меню' : 'Закрыть' }}
 			+e.wrap
 				+e.line
 				+e.line
@@ -33,9 +32,9 @@
 					li
 						a.js-link.js-scroll-to(href="#main") Главная
 					li
-						a.js-link.js-scroll-to(href="#about") О нас
+						a.js-link.js-scroll-to(href="#about") Услуги
 					li
-						a.js-link.js-scroll-to(href="#portfolio") Портфолио
+						a.js-link.js-scroll-to(href="#portfolio") Наши проекты
 					li
 						a.js-link.js-scroll-to(href="#blog") Блог
 					li

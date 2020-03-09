@@ -11,43 +11,11 @@
 	background: #02213D;
 	text-align: center;
 	&__logo {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		width: 1174rem;
-		transform: translateX(-50%) translateY(-50%);
-		.translate-top {
-			animation: cube 0.75s linear;
-		}
-		.translate-bottom {
-			animation-name: cube;
-			animation-duration: 1.5s;
-			animation-timing-function: linear;
-		}
-	}
-	&__wrap {
-		position: relative;
-		width: 100%;
-	}
-	&__title {
-		font-size: 108rem;
-		line-height: 127rem;
-		margin-bottom: 25rem;
-		transition: 0.5s;
-		transform: translateY(20px);
-		opacity: 0;
-	}
-	&__desc {
-		transition-delay: 0.3s;
-		transition-duration: 0.5s;
-		transform: translateY(20px);
-		opacity: 0;
-	}
-	&.is-active {
-		.preloader__title, .preloader__desc {
-			opacity: 1;
-			transform: translateY(0);
-		}
+		width: 100rem;
+		animation-name: cube_rotate;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: infinite;
 	}
 }
 

@@ -1,0 +1,14 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Кейс'
+
+block content
+	//include ../layouts/preloader
+	.fullpage
+		.fullpage__top
+			include ../layouts/header2
+		.fullpage__center
+			include ../layouts/case
+		.fullpage__bottom
+			include ../layouts/footer2

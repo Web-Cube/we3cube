@@ -29,13 +29,22 @@ var thousandSeparator = str => {
 };
 
 var openPage = function() {
-	let windowHash = window.location.hash;
-	let index = $(".header__mobile-nav ul li a[href='" + windowHash + "']").closest("li").index();
-	if ( windowHash.length > 0 ) {
-		setTimeout(function(){
-			$(".pagin .swiper-pagination-bullet:eq(" + index + ")").click();
-		},1000);
+	var windowHash = window.location.hash;
+	var index = $(".js-link[href='" + windowHash + "']").closest("li").index();
+	/*if( $(window).width() > 740 ) {
+		if ( windowHash.length > 0 ) {
+			setTimeout(function(){
+				$(".pagin .swiper-pagination-bullet:eq(" + index + ")").click();
+			},1000);
+		}
+	} else {
+		$("html, body").animate({
+			scrollTop: $( windowHash ).offset().top + "px"
+		}, {
+			duration: 1000
+		});
 	}
+	return false;*/
 };
 
 export { getRandomInt, requireAll, animationEnd, transitionEnd, thousandSeparator, openPage };

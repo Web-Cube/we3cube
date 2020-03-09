@@ -2,9 +2,12 @@
 	width: 100%;
 	&__desc {
 		margin-top: 20rem;
-		font-size: 22rem;
-		line-height: 26rem;
+		font-size: 20rem;
+		line-height: 24rem;
 		font-weight: 300;
+		p:not(:last-child) {
+			margin-bottom: 5rem;
+		}
 	}
 	&__bottom {
 		margin-top: 40rem;

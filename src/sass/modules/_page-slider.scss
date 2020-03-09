@@ -1,5 +1,9 @@
 .page-slider {
 	width: 100%;
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
 }
 
 @include max-screen(740px) {

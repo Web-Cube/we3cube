@@ -131,19 +131,8 @@
 	&__text {
 		margin-right: 12px;
 		text-transform: uppercase;
-		&_close {
-			display: none;
-		}
 	}
 	&.is-active {
-		.burger__text {
-			&_close {
-				display: block;
-			}
-			&_open {
-				display: none;
-			}
-		}
 		.burger {
 			&__line {
 				&:nth-child(2) {

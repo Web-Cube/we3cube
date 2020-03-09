@@ -2,8 +2,17 @@
 	padding: 30rem 0 30rem 0;
 	margin-top: 50rem;
 	&__text {
-		margin-right: 20rem;
+		font-size: 16px;
 		display: none;
+		margin-bottom: 12px;
+	}
+	&__copyright {
+		font-size: 12px;
+		font-weight: 300;
+		text-transform: uppercase;
+		&-icon {
+			font-size: 17px;
+		}
 	}
 }
 
@@ -15,6 +24,19 @@
 		}
 		&__text {
 			display: block;
+		}
+		&__left, &__right {
+			width: 100%;
+			text-align: center;
+		}
+		&__social {
+			justify-content: center;
+		}
+		&_page {
+			.footer__left {
+				order: 2;
+				margin-top: 15px;
+			}
 		}
 	}
 }

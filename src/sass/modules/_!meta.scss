@@ -1,0 +1,49 @@
+.meta{
+	display: flex;
+	align-items: center;
+	font-size: 13rem;
+	line-height: 1;
+	font-weight: 300;
+	color: rgba(#fff, 0.7);
+	&__user {
+		margin-right: 24rem;
+	}
+	&__date {
+		margin-right: 14rem;
+	}
+	&__comments {
+		display: flex;
+		align-items: center;
+		margin-right: 14rem;
+		&-icon {
+			width: 14rem;
+			margin-right: 5rem;
+			fill: #737891;
+		}
+	}
+	&__likes {
+		display: flex;
+		align-items: center;
+		margin-right: 14rem;
+		&-icon {
+			width: 14rem;
+			margin-right: 5rem;
+			fill: #737891;
+			transition: ease 0.2s;
+		}
+		&:hover, .is-active {
+			.meta__likes-icon {
+				fill: #FF000F;
+			}
+		}
+	}
+	&__views {
+		display: flex;
+		align-items: center;
+		&-icon {
+			width: 19rem;
+			margin-right: 5rem;
+			fill: #737891;
+		}
+	}
+}

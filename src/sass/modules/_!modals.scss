@@ -13,38 +13,31 @@
 	position: relative;
 	margin: auto;
 	width: 100%;
-	padding: 15px 15px 15px 75rem;
-	max-width: 1400px;
-	background-color: #fff;
+	padding: 50rem;
+	max-width: 800rem;
+	display: flex;
+	align-items: center;
+	background-color: #02213D;
+	color: #fff;
 	cursor: auto!important;	
-	font-size: 15rem;
+	font-size: 18rem;
 	&__close{
-		cursor: pointer;
-		font-size: 16px;
-		width: toem(112);
-		height: toem(112);
 		position: absolute;
-		right: 0;
-		top: 0;
-		background: #FAFAFA;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		.icon {
-			width: toem(42);
-		}
+		right: 30rem;
+		top: 30rem;
+		width: 50rem;
+		height: 50rem;
+		stroke: #fff;
+		stroke-width: 2;
+		cursor: pointer;
 	}
-	
-	@include max-screen($large_desktop) {
-		max-width: 1200px;
-		&__close {
-			font-size: 14px;
-		}
+	&__icon {
+		width: 300rem;
+		margin-right: 50rem;
 	}
-}
-.mfp-content, .mfp-bg, .mfp-container{
-	cursor: url('/app/img/close.png') 16 16, auto!important;
-    font-size: 16px;
+	&__title {
+		margin-bottom: 25rem;
+	}
 }
 .mfp-bg{
 	opacity: 0;
@@ -90,9 +83,21 @@
 }
 @include max-screen($large_mobile) {
 	.modals {
+		display: block;
+		text-align: center;
+		padding-left: 20px;
+		padding-right: 20px;
+		&__icon {
+			width: 250rem;
+			margin-right: 0;
+			margin-bottom: 25px;
+		}
+		&__title {
+			margin-bottom: 15px;
+		}
 		&__close {
-			width: 60px;
-			height: 60px;
+			right: 15px;
+			top: 15px;
 		}
 	}
 }

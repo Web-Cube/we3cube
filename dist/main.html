@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Главная</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1582526607445">
+    <link rel="stylesheet" href="/app/css/app.css?v=1583754719362">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="preloader__logo js-svg" data-svg-src="app/img/logo.svg"></div>
+    </div>
     <div class="fullpage">
         <div class="fullpage__top">
             <header class="header">
@@ -24,8 +27,8 @@
                         <div class="header__nav swiper-container">
                             <ul class="swiper-wrapper">
                                 <li class="swiper-slide" data-href="#main">Главная</li>
-                                <li class="swiper-slide" data-href="#about">О нас</li>
-                                <li class="swiper-slide" data-href="#portfolio">Портфолио</li>
+                                <li class="swiper-slide" data-href="#about">Услуги</li>
+                                <li class="swiper-slide" data-href="#portfolio">Наши проекты</li>
                                 <li class="swiper-slide" data-href="#blog">Блог</li>
                                 <li class="swiper-slide" data-href="#contact">Контакты</li>
                             </ul>
@@ -34,9 +37,8 @@
                     <div class="header__right"><a class="header__phone" href="tel:+380981234567"><span class="color-blue">+38 </span>098 12 34 567</a>
                         <br><a class="header__email" href="mailto:info@we3cube.pro"><span class="color-blue">info</span>@we3cube.pro</a>
                     </div>
-                    <div class="header__burger burger">
-                        <div class="burger__text burger__text_open">Меню</div>
-                        <div class="burger__text burger__text_close">Закрыть</div>
+                    <div class="header__burger burger" v-on:click="burger__text = !burger__text">
+                        <div class="burger__text">{{ burger__text ? 'Меню' : 'Закрыть' }}</div>
                         <div class="burger__wrap">
                             <div class="burger__line"></div>
                             <div class="burger__line"></div>
@@ -50,9 +52,9 @@
                             <ul>
                                 <li><a class="js-link js-scroll-to" href="#main">Главная</a>
                                 </li>
-                                <li><a class="js-link js-scroll-to" href="#about">О нас</a>
+                                <li><a class="js-link js-scroll-to" href="#about">Услуги</a>
                                 </li>
-                                <li><a class="js-link js-scroll-to" href="#portfolio">Портфолио</a>
+                                <li><a class="js-link js-scroll-to" href="#portfolio">Наши проекты</a>
                                 </li>
                                 <li><a class="js-link js-scroll-to" href="#blog">Блог</a>
                                 </li>
@@ -78,7 +80,6 @@
             </header>
         </div>
         <div class="fullpage__center">
-            <!--include ../layouts/preloader-->
             <img class="page-bg" src="app/img/main__cube.svg">
             <div class="page-slider swiper-container">
                 <div class="page-slider__wrapper swiper-wrapper">
@@ -89,12 +90,12 @@
                                     <div class="main__left">
                                         <h1 class="main__title color-blue h1">WE3CUBE STUDIO</h1>
                                         <div class="main__desc">
-                                            <p>Дизайн веб продуктов.</p>
-                                            <p>Решим задачи связанные с&nbsp;дизайном сайтов, приложений, фирменного стиля.</p>
-                                            <p>Продвинем сайт в&nbsp;поисковиках.</p>
-                                            <p>Наполним контентом сайт.</p>
+                                            <p>Создание сайта под&nbsp;ключ.</p>
+                                            <p>Доработка текущего сайта с&nbsp;любого этапа.</p>
                                         </div>
-                                        <div class="main__bottom flex"><a class="main__btn btn btn_fill btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">наши проекты</span></a><a class="main__btn btn btn_stroke btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">связь с&nbsp;нами</span></a>
+                                        <div class="main__bottom flex"><a class="main__btn btn btn_fill btn js-to-screen" href="#about"><span class="btn__back js-circles"></span><span class="btn__text">Все услуги</span></a>
+                                            <a class="main__btn btn btn_stroke btn js-to-screen" href="#portfolio"><span class="btn__back js-circles"></span><span class="btn__text">Наши проекты</span>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="main__right">
@@ -107,7 +108,7 @@
                     <div class="page-slider__slide swiper-slide" id="about">
                         <div class="category">
                             <div class="category__wrap wrap">
-                                <h2 class="category__title h1"><span class="color-blue"> Наши </span>направления</h2>
+                                <h2 class="category__title h1"><span class="color-blue"> Наши </span>услуги</h2>
                                 <div class="category__list flex">
                                     <div class="category__item">
                                         <h3 class="category__item-title">ИНТЕРНЕТ МАГАЗИН</h3>
@@ -355,11 +356,15 @@
                                                 <picture>
                                                     <source type="image/webp" srcset="/app/img/news__thumb1.webp">
                                                         <img src="/app/img/news__thumb1.jpg" />
-                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">CSS-препроцессоры против CSS1</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                </picture><span class="blog__info"><span class="blog__info-meta flex flex_vertical meta"><span class="meta__date">12.05.2020</span><span class="meta__likes"><span class="meta__likes-icon"><svg class="icon icon-like like" viewBox="0 0 13 12"><use xlink:href="/app/icons/sprite.svg#like"></use></svg></span>
                                                 <span
-                                                class="btn__text">Подробнее</span>
-                                                    </span>
-                                                    </span>
+                                                class="meta__likes-text">20</span>
+                                                    </span><span class="meta__views"><span class="meta__views-icon"><svg class="icon icon-views views" viewBox="0 0 19 12"><use xlink:href="/app/icons/sprite.svg#views"></use></svg></span><span class="meta__views-text">165</span></span>
+                                                    </span><span class="blog__info-title color-blue">CSS-препроцессоры против CSS1</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                    <span
+                                                    class="btn__text">Подробнее</span>
+                                                        </span>
+                                                        </span>
                                             </a>
                                         </div>
                                         <div class="blog__slide swiper-slide">
@@ -367,11 +372,15 @@
                                                 <picture>
                                                     <source type="image/webp" srcset="/app/img/news__thumb2.webp">
                                                         <img src="/app/img/news__thumb2.jpg" />
-                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit2</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                </picture><span class="blog__info"><span class="blog__info-meta flex flex_vertical meta"><span class="meta__date">12.05.2020</span><span class="meta__likes"><span class="meta__likes-icon"><svg class="icon icon-like like" viewBox="0 0 13 12"><use xlink:href="/app/icons/sprite.svg#like"></use></svg></span>
                                                 <span
-                                                class="btn__text">Подробнее</span>
-                                                    </span>
-                                                    </span>
+                                                class="meta__likes-text">20</span>
+                                                    </span><span class="meta__views"><span class="meta__views-icon"><svg class="icon icon-views views" viewBox="0 0 19 12"><use xlink:href="/app/icons/sprite.svg#views"></use></svg></span><span class="meta__views-text">165</span></span>
+                                                    </span><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit2</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                    <span
+                                                    class="btn__text">Подробнее</span>
+                                                        </span>
+                                                        </span>
                                             </a>
                                         </div>
                                         <div class="blog__slide swiper-slide">
@@ -379,11 +388,15 @@
                                                 <picture>
                                                     <source type="image/webp" srcset="/app/img/news__thumb1.webp">
                                                         <img src="/app/img/news__thumb1.jpg" />
-                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">CSS-препроцессоры против CSS3</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                </picture><span class="blog__info"><span class="blog__info-meta flex flex_vertical meta"><span class="meta__date">12.05.2020</span><span class="meta__likes"><span class="meta__likes-icon"><svg class="icon icon-like like" viewBox="0 0 13 12"><use xlink:href="/app/icons/sprite.svg#like"></use></svg></span>
                                                 <span
-                                                class="btn__text">Подробнее</span>
-                                                    </span>
-                                                    </span>
+                                                class="meta__likes-text">20</span>
+                                                    </span><span class="meta__views"><span class="meta__views-icon"><svg class="icon icon-views views" viewBox="0 0 19 12"><use xlink:href="/app/icons/sprite.svg#views"></use></svg></span><span class="meta__views-text">165</span></span>
+                                                    </span><span class="blog__info-title color-blue">CSS-препроцессоры против CSS3</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                    <span
+                                                    class="btn__text">Подробнее</span>
+                                                        </span>
+                                                        </span>
                                             </a>
                                         </div>
                                         <div class="blog__slide swiper-slide">
@@ -391,11 +404,15 @@
                                                 <picture>
                                                     <source type="image/webp" srcset="/app/img/news__thumb2.webp">
                                                         <img src="/app/img/news__thumb2.jpg" />
-                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit4</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                </picture><span class="blog__info"><span class="blog__info-meta flex flex_vertical meta"><span class="meta__date">12.05.2020</span><span class="meta__likes"><span class="meta__likes-icon"><svg class="icon icon-like like" viewBox="0 0 13 12"><use xlink:href="/app/icons/sprite.svg#like"></use></svg></span>
                                                 <span
-                                                class="btn__text">Подробнее</span>
-                                                    </span>
-                                                    </span>
+                                                class="meta__likes-text">20</span>
+                                                    </span><span class="meta__views"><span class="meta__views-icon"><svg class="icon icon-views views" viewBox="0 0 19 12"><use xlink:href="/app/icons/sprite.svg#views"></use></svg></span><span class="meta__views-text">165</span></span>
+                                                    </span><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit4</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                    <span
+                                                    class="btn__text">Подробнее</span>
+                                                        </span>
+                                                        </span>
                                             </a>
                                         </div>
                                         <div class="blog__slide swiper-slide">
@@ -403,11 +420,15 @@
                                                 <picture>
                                                     <source type="image/webp" srcset="/app/img/news__thumb1.webp">
                                                         <img src="/app/img/news__thumb1.jpg" />
-                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">CSS-препроцессоры против CSS5</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                </picture><span class="blog__info"><span class="blog__info-meta flex flex_vertical meta"><span class="meta__date">12.05.2020</span><span class="meta__likes"><span class="meta__likes-icon"><svg class="icon icon-like like" viewBox="0 0 13 12"><use xlink:href="/app/icons/sprite.svg#like"></use></svg></span>
                                                 <span
-                                                class="btn__text">Подробнее</span>
-                                                    </span>
-                                                    </span>
+                                                class="meta__likes-text">20</span>
+                                                    </span><span class="meta__views"><span class="meta__views-icon"><svg class="icon icon-views views" viewBox="0 0 19 12"><use xlink:href="/app/icons/sprite.svg#views"></use></svg></span><span class="meta__views-text">165</span></span>
+                                                    </span><span class="blog__info-title color-blue">CSS-препроцессоры против CSS5</span><span class="blog__desc">Не баттл, а&nbsp;унижение текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                    <span
+                                                    class="btn__text">Подробнее</span>
+                                                        </span>
+                                                        </span>
                                             </a>
                                         </div>
                                         <div class="blog__slide swiper-slide">
@@ -415,11 +436,15 @@
                                                 <picture>
                                                     <source type="image/webp" srcset="/app/img/news__thumb2.webp">
                                                         <img src="/app/img/news__thumb2.jpg" />
-                                                </picture><span class="blog__info"><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit6</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                </picture><span class="blog__info"><span class="blog__info-meta flex flex_vertical meta"><span class="meta__date">12.05.2020</span><span class="meta__likes"><span class="meta__likes-icon"><svg class="icon icon-like like" viewBox="0 0 13 12"><use xlink:href="/app/icons/sprite.svg#like"></use></svg></span>
                                                 <span
-                                                class="btn__text">Подробнее</span>
-                                                    </span>
-                                                    </span>
+                                                class="meta__likes-text">20</span>
+                                                    </span><span class="meta__views"><span class="meta__views-icon"><svg class="icon icon-views views" viewBox="0 0 19 12"><use xlink:href="/app/icons/sprite.svg#views"></use></svg></span><span class="meta__views-text">165</span></span>
+                                                    </span><span class="blog__info-title color-blue">Типографика в&nbsp;UI kit6</span><span class="blog__desc">Что нужно знать веб-дизайнеру текст текст текст текст ...</span><span class="blog__info-btn btn btn_fill btn"><span class="btn__back js-circles"></span>
+                                                    <span
+                                                    class="btn__text">Подробнее</span>
+                                                        </span>
+                                                        </span>
                                             </a>
                                         </div>
                                     </div>
@@ -544,9 +569,17 @@
             </footer>
         </div>
     </div>
-    <div class="modals mfp-hide" id="recall"></div>
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1582526607472"></script>
+    <div class="modals mfp-hide" id="thank">
+        <img class="modals__icon" src="/app/img/undraw_completed.svg" alt="" role="presentation" />
+        <div class="modals__content">
+            <div class="modals__title h1 color-blue">Спасибо!</div>
+            <div class="modals__desc p">Ваша заявка отправлена.
+                <br>В ближайшее время мы с&nbsp;вами свяжемся.</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="/app/js/app.js?v=1583754719400"></script>
 </body>
 
 </html>

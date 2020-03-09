@@ -151,6 +151,32 @@
 	}
 }
 
+.scroll-icon {
+	position: relative;
+	z-index: 20;
+    border: 1px solid #fff;
+    width: 20px;
+    height: 40px;
+    border-radius: 20px;
+    z-index: 10;
+	&:after {
+		display: block;
+		content: '';
+		width: 6px;
+		height: 6px;
+		margin-left: -3px;
+		background: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		animation-name: scroll-animation;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+	}
+}
+
 @include max-screen(359px) {
 	.btn {
 		min-width: 160rem;

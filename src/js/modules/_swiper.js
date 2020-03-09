@@ -1,5 +1,4 @@
 import Swiper from 'swiper';
-import {openPage} from '../functions';
 
 (() => {
 	
@@ -7,6 +6,13 @@ import {openPage} from '../functions';
 	let content = $('.page-slider')[0];
 	
 	let pagin = $('.footer__pagin')[0];
+	
+	let windowHash = window.location.hash;
+	let index = $(".js-link[href='" + windowHash + "']").closest("li").index();
+	
+	if ( !windowHash.length ) {
+		index = 0;
+	}
 	
 	if( $(window).width() > 740 ) {
 		
@@ -19,15 +25,16 @@ import {openPage} from '../functions';
 			spaceBetween: 0,
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true,
-
+			initialSlide: index,
 		});
 
 		let contentSwiper = new Swiper(content, {
 			loop: true,
-			autoHeight: true,
+			autoHeight: false,
 			slidesPerView: 1,
 			speed: 700,
 			mousewheel: true,
+			initialSlide: index,
 			pagination: {
 				clickable: true,
 				el: pagin,
@@ -38,16 +45,14 @@ import {openPage} from '../functions';
 
 		});
 		
-		openPage();
-		
 	} else {
-		$(window).scroll(function(){
-			if ( $(window).scrollTop() > 100 ) {
-				$(".header").addClass("fixed");
-			} else {
-				$(".header").removeClass("fixed");
-			}
-		});
+		if ( windowHash.length ) {
+			$("html, body").animate({
+				scrollTop: $( windowHash ).offset().top + "px"
+			}, {
+				duration: 1000
+			});
+		}
 	}
 	
 	let portfolio = new Swiper('.portfolio__slider', {
@@ -82,11 +87,6 @@ import {openPage} from '../functions';
 				allowTouchMove: true,
 				onlyExternal: false,
 				speed: 300
-			},
-			400: {
-				slidesPerView: 2,
-			  	loopedSlides: 2,
-				slidesPerGroup: 2,
 			},
 			479: {
 				slidesPerView: 3,

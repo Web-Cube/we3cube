@@ -4,17 +4,23 @@ append vars
 	- title = 'Главная'
 
 block content
-	//include ../layouts/preloader
-	img.page-bg(src="app/img/main__cube.svg")
-	.page-slider.swiper-container
-		.page-slider__wrapper.swiper-wrapper
-			.page-slider__slide.swiper-slide#main
-				include ../layouts/main
-			.page-slider__slide.swiper-slide#about
-				include ../layouts/category
-			.page-slider__slide.swiper-slide#portfolio
-				include ../layouts/portfolio
-			.page-slider__slide.swiper-slide#blog
-				include ../layouts/blog
-			.page-slider__slide.swiper-slide#contact
-				include ../layouts/contact
+	include ../layouts/preloader
+	.fullpage
+		.fullpage__top
+			include ../layouts/header
+		.fullpage__center
+			img.page-bg(src="app/img/main__cube.svg")
+			.page-slider.swiper-container
+				.page-slider__wrapper.swiper-wrapper
+					.page-slider__slide.swiper-slide#main
+						include ../layouts/main
+					.page-slider__slide.swiper-slide#about
+						include ../layouts/category
+					.page-slider__slide.swiper-slide#portfolio
+						include ../layouts/portfolio
+					.page-slider__slide.swiper-slide#blog
+						include ../layouts/blog
+					.page-slider__slide.swiper-slide#contact
+						include ../layouts/contact
+		.fullpage__bottom
+			include ../layouts/footer

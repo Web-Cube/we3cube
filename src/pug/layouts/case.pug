@@ -1,0 +1,81 @@
++b.case
+	+e.head
+		video(autoplay="autoplay", loop="true")
+			source(src='/bounty_promo.mp4', type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+			// source(src='/bounty_promo.webm', type='video/webm; codecs="vp8, vorbis"')
+		+e.head-wrap.wrap
+			+e.head-tag.tag Портфолио
+			+e.head-title
+				| Bounty Invest LTD
+			+e.H1.head-desc.h3
+				| Разработка сайта для инвестиционной компании Bounty
+			+e.head-bottom.flex._center
+				+e.A.head-btn.btn._stroke.btn__(href="https://bountyinvest.com", target="_blank")
+					+e.back.js-circles.SPAN
+					+e.text Посмотреть сайт
+				+e.A.head-btn.btn._fill.btn__.js-scroll-to(href="#contact")
+					+e.back.js-circles.SPAN
+					+e.text Хочу такой же
+		+e.scroll-icon.scroll-icon
+	+e.content
+		.wrap
+			p
+				| CRM “Срибна Роса” — это автоматизированная система по приему и выполнению заказов по доставке воды, основной целью которой является повышение лояльности клиентов и увеличение степени их удовлетворенности услугами компании за счет оперативной обработки заявок и быстрого выявления проблем в работе.
+			h2
+				| Краткое описание проекта
+			p
+				| Перед нашей командой стояла задача разработать CRM-технологию для удобного и эффективного ведения бизнес-процессов компании, увеличения продаж с возможностью проведения анализа информации о клиентах и сотрудниках за счет обработки статистических данных. В рамках работы над проектом нами были выделены следующие задачи:
+			h3
+				| Задачи
+			ul
+				li
+					| создание единой клиентской базы, содержащей всю историю взаимоотношений с клиентами с возможностью управления данной информацией,
+				li
+					| создание единой клиентской базы, содержащей всю историю взаимоотношений с клиентами с возможностью управления данной информацией,
+				li
+					| создание единой клиентской базы, содержащей всю историю взаимоотношений с клиентами с возможностью управления данной информацией,
+				li
+					| создание единой клиентской базы, содержащей всю историю взаимоотношений с клиентами с возможностью управления данной информацией,
+			h2
+				| Результат
+			ol
+				
+				li
+					| создание единой клиентской базы, 
+					a(href="#") содержащей всю историю
+					|  взаимоотношений с клиентами с возможностью управления данной информацией,
+				li
+					| создание единой клиентской базы, содержащей всю историю взаимоотношений с клиентами с возможностью управления данной информацией,
+				li
+					| создание единой клиентской базы, содержащей всю историю взаимоотношений с клиентами с возможностью управления данной информацией,
+				li
+					| создание единой клиентской базы, содержащей всю историю взаимоотношений с клиентами с возможностью управления данной информацией,
+	+e.layouts
+		img(src="/img/bounty_mockup.jpg")
+		+e.layouts-bottom.flex._center
+			+e.A.head-btn.btn._stroke.btn__(href="https://bountyinvest.com", target="_blank")
+				+e.back.js-circles.SPAN
+				+e.text Посмотреть сайт
+	+e.contact.contact__#contact
+		+e.wrap.wrap
+			+e.row.flex._vertical._justify
+				+b.FORM.form.contact__form(action="/app/mail")
+					+e.H3.title.h3
+						span.color-blue Поговорим 
+						| о будущем проекте
+					+e.field
+						+e.INPUT.input(name="name", type="text" placeholder="Имя")
+					+e.field
+						+e.INPUT.input(name="phone", type="tel" placeholder="Телефон")
+					+e.field
+						+e.INPUT.input(name="email", type="email" placeholder="E-mail")
+					+e.field
+						+e.INPUT.input(name="url", type="url" placeholder="Ссылка на сайт(если есть)")
+					+e.field
+						+e.INPUT.input(name="mess", type="text" placeholder="Детали проекта")
+					+e.bottom.flex._end
+						+e.BUTTON.btn.btn._fill.btn__(type="submit")
+							+e.back.js-circles.SPAN
+							+e.text ОТПРАВИТЬ
+				+e.map
+					img(src="/app/img/undraw_world_9iqb.svg", alt="")

@@ -1,0 +1,71 @@
++b.HEADER.header
+	+e.wrap.wrap.flex._vertical._justify
+		+e.left.flex._vertical
+			+e.A.logo.color-blue(href="main.html", title="we3cube.pro - разработка веб сайтов")
+				+e.IMG.logo-img(src="app/img/logo.svg", alt="we3cube.pro - разработка веб сайтов")
+				+e.logo-text WE3CUBE
+			+e.nav.swiper-container
+				ul.swiper-wrapper
+					li
+						a(href="/main.html#main") Главная
+					li
+						a(href="/main.html#about") Услуги
+					li
+						a(href="/main.html#portfolio") Наши проекты
+					li
+						a(href="/main.html#blog") Блог
+					li
+						a(href="/main.html#contact") Контакты
+		+e.right
+			+e.A.phone(href="tel:+380981234567")
+				span.color-blue +38 
+				| 098 12 34 567
+			br
+			+e.A.email(href="mailto:info@we3cube.pro")
+				span.color-blue info
+				| @we3cube.pro
+		+e.burger.burger__(v-on:click="burger__text = !burger__text")
+			+e.text {{ burger__text ? 'Меню' : 'Закрыть' }}
+			+e.wrap
+				+e.line
+				+e.line
+				+e.line
+	+e.mobile
+		+e.mobile-wrap.wrap
+			+e.mobile-nav
+				ul
+					li
+						a(href="/main.html#main") Главная
+					li
+						a(href="/main.html#about") Услуги
+					li
+						a(href="/main.html#portfolio") Наши проекты
+					li
+						a(href="/main.html#blog") Блог
+					li
+						a(href="/main.html#contact") Контакты
+			+e.mobile-bottom
+				+e.mobile-contact
+					+e.A.mobile-phone(href="tel:+380981234567")
+						span.color-blue +38 
+						| 098 12 34 567
+					br
+					+e.A.mobile-email(href="mailto:info@we3cube.pro")
+						span.color-blue info
+						| @we3cube.pro
+				+e.mobile-social.flex_vertical.social__
+					+e.A.link(href="viber://add?number=380988481269", target="_blank")
+						+e.icon
+							+icon('viber','0 0 192 210.0428')
+					+e.A.link(href="tg://resolve?domain=w3bcube", target="_blank")
+						+e.icon
+							+icon('telegram','0 0 512 512')
+					+e.A.link(href="https://wa.me/380987378427", target="_blank")
+						+e.icon
+							+icon('whatsapp','0 0 90 90')
+					+e.A.link(href="https://m.me/misha.oboronov", target="_blank")
+						+e.icon
+							+icon('fb','0 0 512 512')
+					+e.A.link(href="skype:web-cube1", target="_blank")
+						+e.icon
+							+icon('skype','0 0 512 512')
